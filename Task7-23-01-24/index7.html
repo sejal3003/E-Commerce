@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Page</title>
+    <style>
+      @media (min-width: 700px) {
+        .class {
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+        }
+      }
+
+      .class {
+        display: flex;
+        border: solid 5px white;
+        margin: 5px;
+        width: 50%;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        flex-direction: column;
+      }
+      .box1 {
+        border: solid 2px rgb(6, 6, 6);
+        margin: 2px;
+        width: 15%;
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .box2 {
+        border: solid 2px rgb(14, 14, 14);
+        margin: 2px;
+        width: 15%;
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .box3 {
+        border: solid 2px rgb(37, 36, 36);
+        margin: 2px;
+        width: 15%;
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .box4 {
+        border: solid 2px rgb(22, 21, 21);
+        margin: 2px;
+        width: 15%;
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .buttons {
+        display: flex;
+        float: left;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      #btn {
+        border: 1px solid black;
+        height: 40px;
+        width: 40px;
+        display: inline-flexbox;
+      }
+      #reset {
+        padding: 12px;
+        width: 30%;
+        text-align: center;
+        border-radius: 2rem;
+        background-color: grey;
+        color: aliceblue;
+      }
+      .parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="class">
+        <div class="box1" id="div1"></div>
+        <div class="box2" id="div2"></div>
+        <div class="box3" id="div3"></div>
+        <div class="box4" id="div4"></div>
+      </div>
+      <div class="buttons">
+        <div name="div1">
+          <label for="btn">Div1 Buttons:</label>
+          <button
+            id="btn"
+            style="background-color: red"
+            onclick="changecolor1(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: green"
+            onclick="changecolor1(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: blue"
+            onclick="changecolor1(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: yellow"
+            onclick="changecolor1(this)"
+          ></button>
+        </div>
+        <div>
+          <label for="btn">Div2 Buttons:</label>
+          <button
+            id="btn"
+            style="background-color: orange"
+            onclick="changecolor2(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: violet"
+            onclick="changecolor2(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: purple"
+            onclick="changecolor2(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: brown"
+            onclick="changecolor2(this)"
+          ></button>
+        </div>
+        <div>
+          <label for="btn">Div3 Buttons:</label>
+          <button
+            id="btn"
+            style="background-color: rgb(156, 176, 205)"
+            onclick="changecolor3(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: rgb(131, 206, 110)"
+            onclick="changecolor3(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: rgb(230, 210, 210)"
+            onclick="changecolor3(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: rgb(196, 87, 154)"
+            onclick="changecolor3(this)"
+          ></button>
+        </div>
+        <div>
+          <label for="btn">Div4 Buttons:</label>
+          <button
+            id="btn"
+            style="background-color: rgb(8, 34, 20)"
+            onclick="changecolor4(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: rgb(143, 58, 193)"
+            onclick="changecolor4(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: rgb(237, 225, 95)"
+            onclick="changecolor4(this)"
+          ></button>
+          <button
+            id="btn"
+            style="background-color: rgb(161, 211, 67)"
+            onclick="changecolor4(this)"
+          ></button>
+        </div>
+        <button type="reset" id="reset" onclick="reset()">Reset</button>
+      </div>
+    </div>
+    <script>
+      function changecolor1(button) {
+        //get the background color of the button
+        var buttoncolor = getComputedStyle(button).backgroundColor;
+
+        //set the background color of the div
+        var colordiv1 = document.getElementById("div1");
+        colordiv1.style.backgroundColor = buttoncolor;
+        div1.innerHTML = buttoncolor;
+      }
+      function changecolor2(button) {
+        var buttoncolor = getComputedStyle(button).backgroundColor;
+        //set the background color of the div
+        var colordiv2 = document.getElementById("div2");
+        colordiv2.style.backgroundColor = buttoncolor;
+        div2.innerHTML = buttoncolor;
+      }
+      function changecolor3(button) {
+        var buttoncolor = getComputedStyle(button).backgroundColor;
+        //set the background color of the div
+        var colordiv3 = document.getElementById("div3");
+        colordiv3.style.backgroundColor = buttoncolor;
+        div3.innerHTML = buttoncolor;
+      }
+      function changecolor4(button) {
+        var buttoncolor = getComputedStyle(button).backgroundColor;
+        //set the background color of the div
+        var colordiv4 = document.getElementById("div4");
+        colordiv4.style.backgroundColor = buttoncolor;
+        div4.innerHTML = buttoncolor;
+      }
+      function reset() {
+        //div 1 reset
+        var colorDiv1 = document.getElementById("div1");
+        colorDiv1.innerHTML = "";
+        colorDiv1.style.backgroundColor = "white";
+        //div2 reset
+        var colorDiv2 = document.getElementById("div2");
+        colorDiv2.innerHTML = "";
+        colorDiv2.style.backgroundColor = "white";
+        //div3 reset
+        var colorDiv3 = document.getElementById("div3");
+        colorDiv3.innerHTML = "";
+        colorDiv3.style.backgroundColor = "white";
+        //div4 reset
+        var colorDiv4 = document.getElementById("div4");
+        colorDiv4.innerHTML = "";
+        colorDiv4.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
+</html>

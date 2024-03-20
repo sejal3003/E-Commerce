@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .class {
+        display: flex;
+        border: solid 2px black;
+        margin: 5px;
+        width: 50%;
+        background-color: white;
+        flex-direction: column;
+      }
+      .box1 {
+        border: solid 2px white;
+        background-color: rgb(30, 191, 194);
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .box2 {
+        border: solid 2px white;
+        background-color: rgb(30, 191, 194);
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .box3 {
+        border: solid 2px white;
+        background-color: rgb(30, 191, 194);
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .box4 {
+        border: solid 2px white;
+        background-color: rgb(30, 191, 194);
+        padding: 2px;
+        height: 100px;
+        align-content: center;
+      }
+      .contain {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+      }
+      .contain2 {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+      }
+      @media (min-width: 300px) {
+        .class {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="class">
+      <div class="contain">
+        <div class="box1">div1</div>
+        <div class="box2">div2</div>
+        <div class="box3">div3</div>
+      </div>
+      <div class="contain2">
+        <div class="box4">div4</div>
+      </div>
+    </div>
+  </body>
+</html>

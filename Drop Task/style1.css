@@ -1,0 +1,16 @@
+.dropdown {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

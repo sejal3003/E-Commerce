@@ -1,0 +1,36 @@
+form {
+  background-image: url("img.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+h1 {
+  text-align: center;
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  font-weight: bold;
+  color: aliceblue;
+}
+label {
+  color: aliceblue;
+  font-size: medium;
+}
+input {
+  width: 50%;
+  height: 14px;
+  padding: 6px 12px;
+  color: rgb(10, 11, 11);
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+button {
+  background-color: rgb(208, 220, 245);
+  width: 20%;
+  height: 24px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+}

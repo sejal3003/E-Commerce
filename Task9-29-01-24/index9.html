@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <p style="font-size: 6vw">Hello World!</p>
+    <script>
+      // 1. map Task:
+      // Question: Given an array of numbers, create a new array where each number is squared.
+      const originalArray = [1, 2, 3, 4];
+      const squaredArray = [];
+      for (let i = 0; i < originalArray.length; i++) {
+        squaredArray[i] = originalArray[i] * originalArray[i];
+      }
+      console.log(squaredArray);
+
+      // 2. reduce Task:
+      // Question: Calculate the sum of all numbers in an array.
+      const num = [3, 5, 19, 2];
+      let sum = 0;
+      for (let i = 0; i < num.length; i++) {
+        sum += num[i];
+      }
+      console.log(sum);
+
+      // 3. filter Task:
+      // Question: Filter out even numbers from an array.
+      const numbers = [1, 2, 3, 4, 6, 7, 9, 0, 2];
+      const oddNumbers = [];
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 !== 0) {
+          oddNumbers.push(numbers[i]);
+        }
+      }
+      console.log(oddNumbers);
+
+      // 4. slice Task:
+      // Question: Extract a subarray from an array based on a given start and end index.
+      const array = [20, 30, 50, 10, 40];
+      const subarray = [];
+      subarray.push(array.slice(1, -1));
+      console.log(subarray);
+
+      // 5. split Task:
+      // Question: Split a sentence into an array of words.
+      const sentence = "This is a sample sentence";
+      const myArray = sentence.split(" ");
+      console.log(myArray);
+
+      // 6. join Task:
+      // Question: Join an array of words into a single sentence.
+      const wordsArray = ["My", "name", "is", "sejal"];
+      const result = wordsArray.join(" ");
+      console.log(result);
+    </script>
+  </body>
+</html>

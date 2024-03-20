@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page</title>
+  </head>
+  <body>
+    <button type="button" onclick="myfunction()">Click Me!</button>
+    <p>Clicks:<a id="click">0</a></p>
+    <button type="button" id="reset" onclick="reset()">Reset</button>
+    <button type="button" id="decrement" onclick="Decrement()">
+      Decrement
+    </button>
+    <script>
+      let count = 0;
+      function myfunction() {
+        count += 1;
+        document.getElementById("click").innerHTML = count;
+      }
+      function reset() {
+        count = 0;
+        document.getElementById("click").innerHTML = count;
+      }
+      function Decrement() {
+        count -= 5;
+        if (count <= 0) {
+          console.log("count=0");
+        } else {
+          document.getElementById("click").innerHTML = count;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page</title>
+  </head>
+  <body>
+    <button type="button" onclick="increment()">Click Me!</button>
+    <p>Clicks: <span id="click">0</span></p>
+    <button type="button" id="reset" onclick="reset()">Reset</button>
+    <button type="button" id="decrement" onclick="decrement()" disabled>
+      Decrement
+    </button>
+
+    <script>
+      let count = 0;
+
+      function increment() {
+        count += 1;
+        document.getElementById("click").innerHTML = count;
+        enableDecrementButton();
+      }
+
+      function reset() {
+        count = 0;
+        document.getElementById("click").innerHTML = count;
+        enableDecrementButton();
+      }
+
+      function decrement() {
+        count -= 5;
+        count = Math.max(count, 0);
+        document.getElementById("click").innerHTML = count;
+        enableDecrementButton();
+      }
+
+      function enableDecrementButton() {
+        const decrementButton = document.getElementById("decrement");
+        decrementButton.disabled = count <= 0;
+      }
+    </script>
+  </body>
+</html>-->

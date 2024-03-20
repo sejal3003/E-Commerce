@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .square {
+        width: 30%;
+        padding-bottom: 20%;
+        background-color: #3498db;
+        margin: 10px;
+      }
+
+      @media only screen and (min-width: 600px) {
+        .square {
+          width: calc(33.33% - 20px);
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .square {
+          width: calc(25% - 20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square" id="div1">1</div>
+      <div class="square" id="div2">2</div>
+      <div class="square" id="div3">3</div>
+      <div class="square" id="div4">4</div>
+    </div>
+  </body>
+</html>

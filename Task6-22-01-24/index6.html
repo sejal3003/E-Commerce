@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Background Color</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Arial", sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="para">The Body Color: changed successfully</p>
+    <script>
+      function getRandomColor() {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      window.onload = function () {
+        const randomColor = getRandomColor();
+        let body = document.querySelector("body");
+        body.style.backgroundColor = randomColor;
+        let para = document.querySelector("#para");
+        para.innerHTML += " Color: " + randomColor;
+      };
+    </script>
+  </body>
+</html>

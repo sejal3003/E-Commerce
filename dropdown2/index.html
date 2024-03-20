@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="f-group">
+		
+			<select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+				<option value=""> -- Choose Skills -- </option>
+				<option value="Front-End">Front-End</option>
+				<option value="Back-End">Back-End</option>
+				<option value="Database">DataBase</option>
+			</select>
+		</div>
+		
+		<div class="f-group">
+		
+			<select name="slct2" id="slct2"></select>
+		</div>
+
+	</div>
+
+
+	<script>
+		
+		function populate(s1,s2)
+		{
+			var s1 = document.getElementById(s1);
+			var s2 = document.getElementById(s2);
+
+			s2.innerHTML = "";
+
+			if(s1.value == "Front-End")
+			{
+				var optionArray = ['html|HTML','css|CSS','javascript|JavaScript'];
+			}
+			else if(s1.value  == 'Back-End')
+			{
+				var optionArray = ['java|Java',' php|PHP ',' python|Python'];
+			}
+			else if( s1.value == 'Database')
+			 {
+				 var optionArray =['sql|SQL','mysql|MySQL','mongodb|MongoDB'];
+			 }
+
+			for(var option in optionArray)
+			{
+				var pair = optionArray[option].split("|");
+				var newoption = document.createElement("option");
+
+				newoption.value = pair[0];
+				newoption.innerHTML=pair[1];
+				s2.options.add(newoption);
+			}
+
+		}
+
+	</script>
+	
+</body>
+</html>
